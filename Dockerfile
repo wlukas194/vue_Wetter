@@ -2,7 +2,7 @@
 FROM node:14
 
 # Create a working directory
-RUN mkdir /usr/src/app
+RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 # Copy package.json and package-lock.json to the working directory
