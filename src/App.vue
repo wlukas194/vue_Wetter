@@ -3,6 +3,9 @@
   'cold': typeof weather.main !== 'undefined' && weather.main.temp < 13 }">
 
     <main>
+      <div class="header">
+        <h1>Lass dir dir das Wetter einer bliebigen Stadt anzeigen.</h1>
+      </div>
       <div class="search-box">
         <input
             type="text"
@@ -72,6 +75,8 @@ export default {
           return 'icon-clouds'
         case 'Rain':
           return 'icon-rain'
+        case 'Mist':
+          return 'icon-mist'
         default:
           return 'icon-clear'
       }
