@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'arial', sans-serif;
+}
+
+#main-page {
+  background-image: url('../assets/wetter_default.jpg');
+  background-size: cover, contain;
+  transition: 0.4ms;
+}
+
+#main-page.cold {
+  background-image: url('../assets/wetter_kalt.jpg');
+}
+
+#main-page.warm {
+  background-image: url('../assets/wetter_warm.jpg');
+}
+
+main {
+  min-height: 100vh;
+  padding: 50px;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.75));
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.search-box {
+  width: 60%;
+  margin-bottom: 30px;
+}
+
+.search-box .search-bar {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  color: black;
+  font-size: 25px;
+  border:none;
+
+  border-radius: 10px 0px 0px 0px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 40%);
+  background-color: rgba(255, 255, 255, 60%);
+}
+
+.search-box .search-bar:focus {
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 30%);
+  background-color: rgba(255, 255, 255, 75%);
+  border-radius: 10px 10px 10px 10px;
+  outline: none;
+}
+
+.location-box .location {
+  color: #FFF;
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.location-box .date {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+}
+
+.weather-box {
+  text-align: center;
+  text-shadow: 3px 6px rgba(0, 0, 0, 25%);
+  background-color:rgba(255, 255, 255, 60%);
+  border-radius: 16px;
+  margin: 30px 0px;
+  color: #FFF;
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.25);
+  width: 100%;
+}
+
+.temp {
+  display: inline-block;
+  padding: 10px 25px;
+
+  font-size: 102px;
+  font-weight: 900;
+}
+
+.weather-condition {
+  color: #FFF;
+  font-size: 48px;
+  font-weight: 700;
+  font-style: italic;
+  text-shadow: 3px 6px rgba(0, 0, 0, 0.25);
+  padding: 10px 25px;
+}
+
+.wetter-icon {
+  width: 10vw;
+  height: 10vw;
+  background-size: cover;
+  display: inline-block;
+  padding: 10px 25px;
+}
+.icon-clear {
+  background-image: url('../assets/sun.png');
+}
+
+.icon-clouds {
+  background-image: url('../assets/cloud.png');
+}
+
+.icon-rain {
+  background-image: url('../assets/rain_cloud.png');
+}
+
