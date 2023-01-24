@@ -1,6 +1,7 @@
 <template>
   <div id="main-page" :class="{ 'warm': typeof weather.main !== 'undefined' && weather.main.temp > 25,
   'cold': typeof weather.main !== 'undefined' && weather.main.temp < 13 }">
+    <!--takes the temp of city to get an fitting background, between 14-26 it will show a default background -->
 
     <main>
       <div class="header">
@@ -15,6 +16,8 @@
             @keypress="getWeather"
         />
       </div>
+
+      <!--v-model binds the data from the input to modelBind to use it in getWeather() -->
 
       <div class="weather-wrap" v-if="typeof weather.main != 'undefined'">
         <div class="location-box">
@@ -33,7 +36,7 @@
 </template>
 
 <script>
-export default {
+export default {/* all needed vars  */
   name: 'app',
   data () {
     return {
@@ -44,7 +47,7 @@ export default {
     }
   },
   methods: {
-    getWeather(input) {
+    getWeather(input) {/* api fetch from https://openweathermap.org/  */
       if (input.key == "Enter") {
         fetch(`${this.url}weather?q=${this.modelBind}&units=metric&APPID=${this.api_key}`)
             .then(res => {
@@ -52,10 +55,10 @@ export default {
             }).then(this.setResults);
       }
     },
-    setResults(results) {
+    setResults(results) {/* sets the results to weather */
       this.weather = results;
     },
-    getDate() {
+    getDate() {/* Teilweise aus einem Forum teilweise angepasst zu eigen bedurfnissen */
       let dateObject = new Date();
       let months = ["Januar", "Februar", "März", "April", "Mai", "Juni", "July", "August", "September", "Oktober", "November", "Dezember"];
       let days = ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"];
@@ -65,9 +68,9 @@ export default {
       let month = months[dateObject.getMonth()];
       let year = dateObject.getFullYear();
 
-      return `${day} den, ${date} ${month} ${year}`;
+      return `${day} den, ${date}. ${month}. ${year}`;
     },
-    getIcon() {
+    getIcon() {/* returns fitting icon for the weather */
       switch (this.weather.weather[0].main) {
         case 'Clear':
           return 'icon-clear'
