@@ -68,7 +68,7 @@ export default {/* all needed vars  */
       let month = months[dateObject.getMonth()];
       let year = dateObject.getFullYear();
 
-      return `${day} den, ${date}. ${month}. ${year}`;
+      return `${day} den, ${date}. ${month} ${year}`;
     },
     getIcon() {/* returns fitting icon for the weather */
       switch (this.weather.weather[0].main) {
