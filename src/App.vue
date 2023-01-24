@@ -6,7 +6,7 @@
       <div class="header">
         <h1>Lass dir dir das Wetter einer bliebigen Stadt anzeigen!</h1>
       </div>
-      <div class="search-box">
+      <div class="search_box">
         <input
             type="text"
             class="search-bar"
@@ -17,7 +17,7 @@
       </div>
       <!-- V-model directly binds the data input to modelBind, which is needed for data request of getWeather()-->
 
-      <div class="weather-wrap" v-if="typeof weather_Objekt.main != 'undefined'">
+      <div class="weather_wrap" v-if="typeof weather.main != 'undefined'">
         <div class="loc_box">
           <div class="loc">{{weather.name}}, {{weather.sys.country}}</div>
           <div class="date">{{getDate()}}</div>
