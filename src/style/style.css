@@ -1,53 +1,47 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  font-family: 'arial', sans-serif;
 }
 
 .header{
   color: darkgrey;
   padding-bottom: 10vh;
-  font-family: arial;
+  font-family: Arial;
   text-shadow: 2px 2px 2px black;
 }
 
-#main-page {
+#main_page {
   background-image: url('../assets/wetter_default.jpg');
   background-size: cover, contain;
   transition: 0.4ms;
 }
 
-#main-page.cold {
+#main_page.cold {
   background-image: url('../assets/wetter_kalt.jpg');
 }
 
-#main-page.warm {
+#main_page.warm {
   background-image: url('../assets/wetter_warm.jpg');
 }
 
 main {
   min-height: 100vh;
+  min-width: 100vw;
   padding: 50px;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.75));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 30%), rgba(0, 0, 0, 70%));
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-
 }
 
-.search-box {
+.search_box {
   width: 60%;
   margin-bottom: 30px;
 }
 
-.search-box .search-bar {
+.search_box .search_bar {
   display: block;
   width: 100%;
   padding: 15px;
@@ -60,14 +54,14 @@ main {
   background-color: rgba(255, 255, 255, 60%);
 }
 
-.search-box .search-bar:focus {
+.search_box .search_bar:focus {
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 30%);
   background-color: rgba(255, 255, 255, 75%);
   border-radius: 10px 10px 10px 10px;
   outline: none;
 }
 
-.location-box .location {
+.loc_box .loc {
   color: #FFF;
   font-size: 32px;
   font-weight: 500;
@@ -75,7 +69,7 @@ main {
   text-shadow: 1px 3px rgba(0, 0, 0, 25%);
 }
 
-.location-box .date {
+.loc_box .date {
   color: #FFF;
   font-size: 20px;
   font-weight: 300;
@@ -83,14 +77,15 @@ main {
   text-align: center;
 }
 
-.weather-box {
+.weather_box {
   text-align: center;
-  text-shadow: 3px 6px rgba(0, 0, 0, 25%);
-  background-color:rgba(255, 255, 255, 60%);
+  text-shadow: 5px 10px rgba(0, 0, 0, 30%);
+
   border-radius: 16px;
   margin: 30px 0px;
   color: #FFF;
-  box-shadow: 3px 6px rgba(0, 0, 0, 0.25);
+  box-shadow: 3px 6px rgba(0, 0, 0, 30%);
+  background-color:rgba(255, 255, 255, 60%);
   width: 100%;
 }
 
@@ -102,7 +97,7 @@ main {
   font-weight: 900;
 }
 
-.weather-condition {
+.weather_condition {
   color: #FFF;
   font-size: 48px;
   font-weight: 700;
@@ -111,26 +106,26 @@ main {
   padding: 10px 25px;
 }
 
-.wetter-icon {
+.weather_icon {
   width: 10vw;
   height: 10vw;
   background-size: cover;
   display: inline-block;
   padding: 10px 25px;
 }
-.icon-clear {
+.icon_clear {
   background-image: url('../assets/sun.png');
 }
 
-.icon-clouds {
+.icon_clouds {
   background-image: url('../assets/cloud.png');
 }
 
-.icon-rain {
+.icon_rain {
   background-image: url('../assets/rain_cloud.png');
 }
 
-.icon-mist {
+.icon_mist {
   background-image: url('../assets/mist.png');
 }
 
