@@ -38,7 +38,7 @@ export default {
   data () {
     return {
       api_key: 'c64dcb50920070242c5bf284de3d4efd',
-      url_base: 'https://api.openweathermap.org/data/2.5/',
+      url: 'https://api.openweathermap.org/data/2.5/',
       modelBind: '',
       weather: {},
     }
@@ -46,7 +46,7 @@ export default {
   methods: {
     getWeather(input) {
       if (input.key == "Enter") {
-        fetch(`${this.url_base}weather?q=${this.modelBind}&units=metric&APPID=${this.api_key}`)
+        fetch(`${this.url}weather?q=${this.modelBind}&units=metric&APPID=${this.api_key}`)
             .then(res => {
               return res.json();
             }).then(this.setResults);
