@@ -1,7 +1,7 @@
 <template>
   <div id="main-page" :class="{ 'warm': typeof weather_Objekt.main !== 'undefined' && weather_Objekt.main.temp > 25,
   'cold': typeof weather_Objekt.main !== 'undefined' && weather_Objekt.main.temp < 13 }">
-    <!-- V- :class sets the right background, matching to the right temp. if its between 12 - 26 the default background will be shown-->
+    <!-- V- :class sets the right background, matching to the right temp. if its between 12 - 26 the default background will be shown -->
     <main>
       <div class="header">
         <h1>Lass dir dir das Wetter einer bliebigen Stadt anzeigen!</h1>
