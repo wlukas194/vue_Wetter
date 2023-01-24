@@ -1,6 +1,6 @@
 <template>
-  <div id="main-page" :class="{ 'warm': typeof weather_Objekt.main !== 'undefined' && weather_Objekt.main.temp > 25,
-  'cold': typeof weather_Objekt.main !== 'undefined' && weather_Objekt.main.temp < 13 }">
+  <div id="main-page" :class="{ 'warm': typeof weather.main !== 'undefined' && weather.main.temp > 25,
+  'cold': typeof weather.main !== 'undefined' && weather.main.temp < 13 }">
     <!-- V- :class sets the right background, matching to the right temp. if its between 12 - 26 the default background will be shown-->
     <main>
       <div class="header">
@@ -19,7 +19,7 @@
 
       <div class="weather-wrap" v-if="typeof weather_Objekt.main != 'undefined'">
         <div class="loc_box">
-          <div class="loc">{{weather_Objekt.name}}, {{weather_Objekt.sys.country}}</div>
+          <div class="loc">{{weather.name}}, {{weather.sys.country}}</div>
           <div class="date">{{getDate()}}</div>
         </div>
 
@@ -41,7 +41,7 @@ export default {
       api_key: 'c64dcb50920070242c5bf284de3d4efd',
       url: 'https://api.openweathermap.org/data/2.5/',
       modelBind: '',
-      weather_Objekt: {},
+      weather: {},
     }
   },
   methods: {
@@ -54,7 +54,7 @@ export default {
       }
     },
     setResults(results) {
-      this.weather_Objekt = results;
+      this.weather = results;
     },
     getDate() { /* Teilweise aus einem Forum, aber auf unsere Bedurfnisse angepasst.*/
       let dateObject = new Date();
