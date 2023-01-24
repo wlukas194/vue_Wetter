@@ -24,8 +24,8 @@
         </div>
 
         <div class="weather_box">
-          <div class="temp">{{Math.round(weather_Objekt.main.temp)}}°c</div>
-          <div class="weather_condition">{{weather_Objekt.weather[0].main}}</div>
+          <div class="temp">{{Math.round(weather.main.temp)}}°c</div>
+          <div class="weather_condition">{{weather.weather[0].main}}</div>
           <div class="weather_icon" v-bind:class="getIcon()"></div>
         </div>
       </div>
